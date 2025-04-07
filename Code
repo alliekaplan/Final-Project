@@ -1,1 +1,12 @@
+import requests
 
+url = "https://mcdonald-s-products-api.p.rapidapi.com/us/products/200426"
+
+headers = {
+	"x-rapidapi-key": "7037526e19msh0c77e1b65e20c81p1b5a5ajsnb53b42acb1cf",
+	"x-rapidapi-host": "mcdonald-s-products-api.p.rapidapi.com"
+}
+
+response = requests.get(url, headers=headers)
+
+print(response.json())
