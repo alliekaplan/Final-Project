@@ -1,0 +1,2354 @@
+{
+    "New York City": {
+        "population": 8804190,
+        "coordinates": {
+            "longitude": 40.66,
+            "latitude": -73.94
+        }
+    },
+    "Los Angeles": {
+        "population": 3898747,
+        "coordinates": {
+            "longitude": 34.02,
+            "latitude": -118.41
+        }
+    },
+    "Chicago": {
+        "population": 2746388,
+        "coordinates": {
+            "longitude": 41.84,
+            "latitude": -87.68
+        }
+    },
+    "Houston": {
+        "population": 2304580,
+        "coordinates": {
+            "longitude": 29.79,
+            "latitude": -95.39
+        }
+    },
+    "Phoenix, Arizona": {
+        "population": 1608139,
+        "coordinates": {
+            "longitude": 33.57,
+            "latitude": -112.09
+        }
+    },
+    "Philadelphia": {
+        "population": 1603797,
+        "coordinates": {
+            "longitude": 40.01,
+            "latitude": -75.13
+        }
+    },
+    "San Antonio": {
+        "population": 1434625,
+        "coordinates": {
+            "longitude": 29.46,
+            "latitude": -98.52
+        }
+    },
+    "San Diego": {
+        "population": 1386932,
+        "coordinates": {
+            "longitude": 32.81,
+            "latitude": -117.14
+        }
+    },
+    "Dallas": {
+        "population": 1304379,
+        "coordinates": {
+            "longitude": 32.79,
+            "latitude": -96.77
+        }
+    },
+    "Jacksonville, Florida": {
+        "population": 949611,
+        "coordinates": {
+            "longitude": 30.34,
+            "latitude": -81.66
+        }
+    },
+    "Austin, Texas": {
+        "population": 961855,
+        "coordinates": {
+            "longitude": 30.3,
+            "latitude": -97.75
+        }
+    },
+    "Fort Worth, Texas": {
+        "population": 918915,
+        "coordinates": {
+            "longitude": 32.78,
+            "latitude": -97.35
+        }
+    },
+    "San Jose, California": {
+        "population": 1013240,
+        "coordinates": {
+            "longitude": 37.3,
+            "latitude": -121.81
+        }
+    },
+    "Columbus, Ohio": {
+        "population": 905748,
+        "coordinates": {
+            "longitude": 39.99,
+            "latitude": -82.99
+        }
+    },
+    "Charlotte, North Carolina": {
+        "population": 874579,
+        "coordinates": {
+            "longitude": 35.21,
+            "latitude": -80.83
+        }
+    },
+    "Indianapolis": {
+        "population": 887642,
+        "coordinates": {
+            "longitude": 39.78,
+            "latitude": -86.15
+        }
+    },
+    "San Francisco": {
+        "population": 873965,
+        "coordinates": {
+            "longitude": 37.73,
+            "latitude": -123.03
+        }
+    },
+    "Seattle": {
+        "population": 737015,
+        "coordinates": {
+            "longitude": 47.62,
+            "latitude": -122.35
+        }
+    },
+    "Denver": {
+        "population": 715522,
+        "coordinates": {
+            "longitude": 39.76,
+            "latitude": -104.88
+        }
+    },
+    "Oklahoma City": {
+        "population": 681054,
+        "coordinates": {
+            "longitude": 35.47,
+            "latitude": -97.51
+        }
+    },
+    "Nashville, Tennessee": {
+        "population": 689447,
+        "coordinates": {
+            "longitude": 36.17,
+            "latitude": -86.79
+        }
+    },
+    "Washington, D.C.": {
+        "population": 689545,
+        "coordinates": {
+            "longitude": 38.9,
+            "latitude": -77.02
+        }
+    },
+    "El Paso, Texas": {
+        "population": 678815,
+        "coordinates": {
+            "longitude": 31.85,
+            "latitude": -106.43
+        }
+    },
+    "Las Vegas": {
+        "population": 641903,
+        "coordinates": {
+            "longitude": 36.23,
+            "latitude": -115.26
+        }
+    },
+    "Boston": {
+        "population": 675647,
+        "coordinates": {
+            "longitude": 42.34,
+            "latitude": -71.02
+        }
+    },
+    "Detroit": {
+        "population": 639111,
+        "coordinates": {
+            "longitude": 42.38,
+            "latitude": -83.1
+        }
+    },
+    "Portland, Oregon": {
+        "population": 652503,
+        "coordinates": {
+            "longitude": 45.54,
+            "latitude": -122.65
+        }
+    },
+    "Louisville, Kentucky": {
+        "population": 633045,
+        "coordinates": {
+            "longitude": 38.17,
+            "latitude": -85.65
+        }
+    },
+    "Memphis, Tennessee": {
+        "population": 633104,
+        "coordinates": {
+            "longitude": 35.11,
+            "latitude": -89.97
+        }
+    },
+    "Baltimore": {
+        "population": 585708,
+        "coordinates": {
+            "longitude": 39.3,
+            "latitude": -76.61
+        }
+    },
+    "Milwaukee": {
+        "population": 577222,
+        "coordinates": {
+            "longitude": 43.06,
+            "latitude": -87.97
+        }
+    },
+    "Albuquerque, New Mexico": {
+        "population": 564559,
+        "coordinates": {
+            "longitude": 35.1,
+            "latitude": -106.65
+        }
+    },
+    "Tucson, Arizona": {
+        "population": 542629,
+        "coordinates": {
+            "longitude": 32.15,
+            "latitude": -110.87
+        }
+    },
+    "Fresno, California": {
+        "population": 542107,
+        "coordinates": {
+            "longitude": 36.78,
+            "latitude": -119.79
+        }
+    },
+    "Sacramento, California": {
+        "population": 524943,
+        "coordinates": {
+            "longitude": 38.57,
+            "latitude": -121.47
+        }
+    },
+    "Mesa, Arizona": {
+        "population": 504258,
+        "coordinates": {
+            "longitude": 33.4,
+            "latitude": -111.72
+        }
+    },
+    "Atlanta": {
+        "population": 498715,
+        "coordinates": {
+            "longitude": 33.76,
+            "latitude": -84.42
+        }
+    },
+    "Kansas City, Missouri": {
+        "population": 508090,
+        "coordinates": {
+            "longitude": 39.12,
+            "latitude": -94.56
+        }
+    },
+    "Colorado Springs, Colorado": {
+        "population": 478961,
+        "coordinates": {
+            "longitude": 38.87,
+            "latitude": -104.76
+        }
+    },
+    "Omaha, Nebraska": {
+        "population": 486051,
+        "coordinates": {
+            "longitude": 41.26,
+            "latitude": -96.05
+        }
+    },
+    "Raleigh, North Carolina": {
+        "population": 467665,
+        "coordinates": {
+            "longitude": 35.83,
+            "latitude": -78.64
+        }
+    },
+    "Miami": {
+        "population": 442241,
+        "coordinates": {
+            "longitude": 25.78,
+            "latitude": -80.21
+        }
+    },
+    "Virginia Beach, Virginia": {
+        "population": 459470,
+        "coordinates": {
+            "longitude": 36.78,
+            "latitude": -76.03
+        }
+    },
+    "Long Beach, California": {
+        "population": 466742,
+        "coordinates": {
+            "longitude": 33.78,
+            "latitude": -118.17
+        }
+    },
+    "Oakland, California": {
+        "population": 440646,
+        "coordinates": {
+            "longitude": 37.77,
+            "latitude": -122.23
+        }
+    },
+    "Minneapolis": {
+        "population": 429954,
+        "coordinates": {
+            "longitude": 44.96,
+            "latitude": -93.27
+        }
+    },
+    "Bakersfield, California": {
+        "population": 403455,
+        "coordinates": {
+            "longitude": 35.35,
+            "latitude": -119.04
+        }
+    },
+    "Tulsa, Oklahoma": {
+        "population": 413066,
+        "coordinates": {
+            "longitude": 36.13,
+            "latitude": -95.9
+        }
+    },
+    "Tampa, Florida": {
+        "population": 384959,
+        "coordinates": {
+            "longitude": 27.97,
+            "latitude": -82.47
+        }
+    },
+    "Arlington, Texas": {
+        "population": 394266,
+        "coordinates": {
+            "longitude": 32.7,
+            "latitude": -97.12
+        }
+    },
+    "Wichita, Kansas": {
+        "population": 397532,
+        "coordinates": {
+            "longitude": 37.69,
+            "latitude": -97.35
+        }
+    },
+    "Aurora, Colorado": {
+        "population": 386261,
+        "coordinates": {
+            "longitude": 39.7,
+            "latitude": -104.72
+        }
+    },
+    "New Orleans": {
+        "population": 383997,
+        "coordinates": {
+            "longitude": 30.05,
+            "latitude": -89.93
+        }
+    },
+    "Cleveland": {
+        "population": 372624,
+        "coordinates": {
+            "longitude": 41.48,
+            "latitude": -81.68
+        }
+    },
+    "Honolulu": {
+        "population": 350964,
+        "coordinates": {
+            "longitude": 21.32,
+            "latitude": -157.85
+        }
+    },
+    "Anaheim, California": {
+        "population": 346824,
+        "coordinates": {
+            "longitude": 33.86,
+            "latitude": -117.76
+        }
+    },
+    "Henderson, Nevada": {
+        "population": 317610,
+        "coordinates": {
+            "longitude": 36.01,
+            "latitude": -115.04
+        }
+    },
+    "Orlando, Florida": {
+        "population": 307573,
+        "coordinates": {
+            "longitude": 28.41,
+            "latitude": -81.25
+        }
+    },
+    "Lexington, Kentucky": {
+        "population": 322570,
+        "coordinates": {
+            "longitude": 38.04,
+            "latitude": -84.46
+        }
+    },
+    "Stockton, California": {
+        "population": 320804,
+        "coordinates": {
+            "longitude": 37.98,
+            "latitude": -121.31
+        }
+    },
+    "Riverside, California": {
+        "population": 314998,
+        "coordinates": {
+            "longitude": 33.94,
+            "latitude": -117.39
+        }
+    },
+    "Corpus Christi, Texas": {
+        "population": 317863,
+        "coordinates": {
+            "longitude": 27.75,
+            "latitude": -97.17
+        }
+    },
+    "Irvine, California": {
+        "population": 307670,
+        "coordinates": {
+            "longitude": 33.68,
+            "latitude": -117.77
+        }
+    },
+    "Cincinnati": {
+        "population": 309317,
+        "coordinates": {
+            "longitude": 39.14,
+            "latitude": -84.51
+        }
+    },
+    "Santa Ana, California": {
+        "population": 310227,
+        "coordinates": {
+            "longitude": 33.74,
+            "latitude": -117.88
+        }
+    },
+    "Newark, New Jersey": {
+        "population": 311549,
+        "coordinates": {
+            "longitude": 40.72,
+            "latitude": -74.17
+        }
+    },
+    "Saint Paul, Minnesota": {
+        "population": 311527,
+        "coordinates": {
+            "longitude": 44.95,
+            "latitude": -93.1
+        }
+    },
+    "Pittsburgh": {
+        "population": 302971,
+        "coordinates": {
+            "longitude": 40.44,
+            "latitude": -79.98
+        }
+    },
+    "Greensboro, North Carolina": {
+        "population": 299035,
+        "coordinates": {
+            "longitude": 36.1,
+            "latitude": -79.83
+        }
+    },
+    "Durham, North Carolina": {
+        "population": 283506,
+        "coordinates": {
+            "longitude": 35.98,
+            "latitude": -78.9
+        }
+    },
+    "Lincoln, Nebraska": {
+        "population": 291082,
+        "coordinates": {
+            "longitude": 40.81,
+            "latitude": -96.68
+        }
+    },
+    "Jersey City, New Jersey": {
+        "population": 292449,
+        "coordinates": {
+            "longitude": 40.71,
+            "latitude": -74.06
+        }
+    },
+    "Plano, Texas": {
+        "population": 285494,
+        "coordinates": {
+            "longitude": 33.05,
+            "latitude": -96.75
+        }
+    },
+    "Anchorage, Alaska": {
+        "population": 291247,
+        "coordinates": {
+            "longitude": 61.17,
+            "latitude": -149.28
+        }
+    },
+    "North Las Vegas, Nevada": {
+        "population": 262527,
+        "coordinates": {
+            "longitude": 36.28,
+            "latitude": -115.09
+        }
+    },
+    "St. Louis": {
+        "population": 301578,
+        "coordinates": {
+            "longitude": 38.64,
+            "latitude": -90.24
+        }
+    },
+    "Madison, Wisconsin": {
+        "population": 269840,
+        "coordinates": {
+            "longitude": 43.09,
+            "latitude": -89.43
+        }
+    },
+    "Chandler, Arizona": {
+        "population": 275987,
+        "coordinates": {
+            "longitude": 33.28,
+            "latitude": -111.85
+        }
+    },
+    "Gilbert, Arizona": {
+        "population": 267918,
+        "coordinates": {
+            "longitude": 33.31,
+            "latitude": -111.74
+        }
+    },
+    "Reno, Nevada": {
+        "population": 264165,
+        "coordinates": {
+            "longitude": 39.55,
+            "latitude": -119.85
+        }
+    },
+    "Buffalo, New York": {
+        "population": 278349,
+        "coordinates": {
+            "longitude": 42.89,
+            "latitude": -78.86
+        }
+    },
+    "Chula Vista, California": {
+        "population": 275487,
+        "coordinates": {
+            "longitude": 32.63,
+            "latitude": -117.02
+        }
+    },
+    "Fort Wayne, Indiana": {
+        "population": 263886,
+        "coordinates": {
+            "longitude": 41.09,
+            "latitude": -85.14
+        }
+    },
+    "Lubbock, Texas": {
+        "population": 257141,
+        "coordinates": {
+            "longitude": 33.57,
+            "latitude": -101.89
+        }
+    },
+    "Toledo, Ohio": {
+        "population": 270871,
+        "coordinates": {
+            "longitude": 41.66,
+            "latitude": -83.58
+        }
+    },
+    "St. Petersburg, Florida": {
+        "population": 258308,
+        "coordinates": {
+            "longitude": 27.77,
+            "latitude": -82.64
+        }
+    },
+    "Laredo, Texas": {
+        "population": 255205,
+        "coordinates": {
+            "longitude": 27.56,
+            "latitude": -99.49
+        }
+    },
+    "Irving, Texas": {
+        "population": 256684,
+        "coordinates": {
+            "longitude": 32.86,
+            "latitude": -96.97
+        }
+    },
+    "Chesapeake, Virginia": {
+        "population": 249422,
+        "coordinates": {
+            "longitude": 36.68,
+            "latitude": -76.3
+        }
+    },
+    "Glendale, Arizona": {
+        "population": 248325,
+        "coordinates": {
+            "longitude": 33.53,
+            "latitude": -112.19
+        }
+    },
+    "Winston-Salem, North Carolina": {
+        "population": 249545,
+        "coordinates": {
+            "longitude": 36.1,
+            "latitude": -80.26
+        }
+    },
+    "Port St. Lucie, Florida": {
+        "population": 204851,
+        "coordinates": {
+            "longitude": 27.28,
+            "latitude": -80.39
+        }
+    },
+    "Scottsdale, Arizona": {
+        "population": 241361,
+        "coordinates": {
+            "longitude": 33.68,
+            "latitude": -111.86
+        }
+    },
+    "Garland, Texas": {
+        "population": 246018,
+        "coordinates": {
+            "longitude": 32.91,
+            "latitude": -96.63
+        }
+    },
+    "Boise, Idaho": {
+        "population": 235684,
+        "coordinates": {
+            "longitude": 43.6,
+            "latitude": -116.23
+        }
+    },
+    "Norfolk, Virginia": {
+        "population": 238005,
+        "coordinates": {
+            "longitude": 36.92,
+            "latitude": -76.24
+        }
+    },
+    "Spokane, Washington": {
+        "population": 228989,
+        "coordinates": {
+            "longitude": 47.67,
+            "latitude": -117.43
+        }
+    },
+    "Richmond, Virginia": {
+        "population": 226610,
+        "coordinates": {
+            "longitude": 37.53,
+            "latitude": -77.48
+        }
+    },
+    "Fremont, California": {
+        "population": 230504,
+        "coordinates": {
+            "longitude": 37.49,
+            "latitude": -121.94
+        }
+    },
+    "Huntsville, Alabama": {
+        "population": 215006,
+        "coordinates": {
+            "longitude": 34.78,
+            "latitude": -86.53
+        }
+    },
+    "Frisco, Texas": {
+        "population": 200509,
+        "coordinates": {
+            "longitude": 33.16,
+            "latitude": -96.82
+        }
+    },
+    "Cape Coral, Florida": {
+        "population": 194016,
+        "coordinates": {
+            "longitude": 26.65,
+            "latitude": -81.99
+        }
+    },
+    "Santa Clarita, California": {
+        "population": 228673,
+        "coordinates": {
+            "longitude": 34.41,
+            "latitude": -118.49
+        }
+    },
+    "San Bernardino, California": {
+        "population": 222101,
+        "coordinates": {
+            "longitude": 34.14,
+            "latitude": -117.29
+        }
+    },
+    "Tacoma, Washington": {
+        "population": 219346,
+        "coordinates": {
+            "longitude": 47.25,
+            "latitude": -122.46
+        }
+    },
+    "Hialeah, Florida": {
+        "population": 223109,
+        "coordinates": {
+            "longitude": 25.87,
+            "latitude": -80.3
+        }
+    },
+    "Baton Rouge, Louisiana": {
+        "population": 227470,
+        "coordinates": {
+            "longitude": 30.44,
+            "latitude": -91.13
+        }
+    },
+    "Modesto, California": {
+        "population": 218464,
+        "coordinates": {
+            "longitude": 37.64,
+            "latitude": -121.0
+        }
+    },
+    "Fontana, California": {
+        "population": 208393,
+        "coordinates": {
+            "longitude": 34.11,
+            "latitude": -117.46
+        }
+    },
+    "McKinney, Texas": {
+        "population": 195308,
+        "coordinates": {
+            "longitude": 33.2,
+            "latitude": -96.66
+        }
+    },
+    "Moreno Valley, California": {
+        "population": 208634,
+        "coordinates": {
+            "longitude": 33.92,
+            "latitude": -117.21
+        }
+    },
+    "Des Moines, Iowa": {
+        "population": 214133,
+        "coordinates": {
+            "longitude": 41.57,
+            "latitude": -93.61
+        }
+    },
+    "Fayetteville, North Carolina": {
+        "population": 208501,
+        "coordinates": {
+            "longitude": 35.08,
+            "latitude": -78.97
+        }
+    },
+    "Salt Lake City": {
+        "population": 199723,
+        "coordinates": {
+            "longitude": 40.78,
+            "latitude": -111.93
+        }
+    },
+    "Yonkers, New York": {
+        "population": 211569,
+        "coordinates": {
+            "longitude": 40.95,
+            "latitude": -73.87
+        }
+    },
+    "Worcester, Massachusetts": {
+        "population": 206518,
+        "coordinates": {
+            "longitude": 42.27,
+            "latitude": -71.81
+        }
+    },
+    "Rochester, New York": {
+        "population": 211328,
+        "coordinates": {
+            "longitude": 43.17,
+            "latitude": -77.62
+        }
+    },
+    "Sioux Falls, South Dakota": {
+        "population": 192517,
+        "coordinates": {
+            "longitude": 43.54,
+            "latitude": -96.73
+        }
+    },
+    "Little Rock, Arkansas": {
+        "population": 202591,
+        "coordinates": {
+            "longitude": 34.72,
+            "latitude": -92.36
+        }
+    },
+    "Amarillo, Texas": {
+        "population": 200393,
+        "coordinates": {
+            "longitude": 35.2,
+            "latitude": -101.83
+        }
+    },
+    "Tallahassee, Florida": {
+        "population": 196169,
+        "coordinates": {
+            "longitude": 30.46,
+            "latitude": -84.25
+        }
+    },
+    "Grand Prairie, Texas": {
+        "population": 196100,
+        "coordinates": {
+            "longitude": 32.69,
+            "latitude": -97.02
+        }
+    },
+    "Columbus, Georgia": {
+        "population": 206922,
+        "coordinates": {
+            "longitude": 32.51,
+            "latitude": -84.87
+        }
+    },
+    "Augusta, Georgia": {
+        "population": 202081,
+        "coordinates": {
+            "longitude": 33.37,
+            "latitude": -82.07
+        }
+    },
+    "Peoria, Arizona": {
+        "population": 190985,
+        "coordinates": {
+            "longitude": 33.79,
+            "latitude": -112.31
+        }
+    },
+    "Oxnard, California": {
+        "population": 202063,
+        "coordinates": {
+            "longitude": 34.2,
+            "latitude": -119.21
+        }
+    },
+    "Knoxville, Tennessee": {
+        "population": 190740,
+        "coordinates": {
+            "longitude": 35.97,
+            "latitude": -83.95
+        }
+    },
+    "Overland Park, Kansas": {
+        "population": 197238,
+        "coordinates": {
+            "longitude": 38.89,
+            "latitude": -94.69
+        }
+    },
+    "Birmingham, Alabama": {
+        "population": 200733,
+        "coordinates": {
+            "longitude": 33.53,
+            "latitude": -86.8
+        }
+    },
+    "Grand Rapids, Michigan": {
+        "population": 198917,
+        "coordinates": {
+            "longitude": 42.96,
+            "latitude": -85.66
+        }
+    },
+    "Vancouver, Washington": {
+        "population": 190915,
+        "coordinates": {
+            "longitude": 45.64,
+            "latitude": -122.6
+        }
+    },
+    "Montgomery, Alabama": {
+        "population": 200603,
+        "coordinates": {
+            "longitude": 32.35,
+            "latitude": -86.27
+        }
+    },
+    "Huntington Beach, California": {
+        "population": 198711,
+        "coordinates": {
+            "longitude": 33.7,
+            "latitude": -118.0
+        }
+    },
+    "Providence, Rhode Island": {
+        "population": 190934,
+        "coordinates": {
+            "longitude": 41.82,
+            "latitude": -71.42
+        }
+    },
+    "Brownsville, Texas": {
+        "population": 186738,
+        "coordinates": {
+            "longitude": 26.0,
+            "latitude": -97.45
+        }
+    },
+    "Tempe, Arizona": {
+        "population": 180587,
+        "coordinates": {
+            "longitude": 33.39,
+            "latitude": -111.93
+        }
+    },
+    "Akron, Ohio": {
+        "population": 190469,
+        "coordinates": {
+            "longitude": 41.08,
+            "latitude": -81.52
+        }
+    },
+    "Glendale, California": {
+        "population": 196543,
+        "coordinates": {
+            "longitude": 34.18,
+            "latitude": -118.25
+        }
+    },
+    "Chattanooga, Tennessee": {
+        "population": 181099,
+        "coordinates": {
+            "longitude": 35.07,
+            "latitude": -85.25
+        }
+    },
+    "Fort Lauderdale, Florida": {
+        "population": 182760,
+        "coordinates": {
+            "longitude": 26.14,
+            "latitude": -80.15
+        }
+    },
+    "Newport News, Virginia": {
+        "population": 186247,
+        "coordinates": {
+            "longitude": 37.08,
+            "latitude": -76.52
+        }
+    },
+    "Mobile, Alabama": {
+        "population": 187041,
+        "coordinates": {
+            "longitude": 30.67,
+            "latitude": -88.1
+        }
+    },
+    "Ontario, California": {
+        "population": 175265,
+        "coordinates": {
+            "longitude": 34.04,
+            "latitude": -117.6
+        }
+    },
+    "Clarksville, Tennessee": {
+        "population": 166722,
+        "coordinates": {
+            "longitude": 36.57,
+            "latitude": -87.35
+        }
+    },
+    "Cary, North Carolina": {
+        "population": 174721,
+        "coordinates": {
+            "longitude": 35.78,
+            "latitude": -78.82
+        }
+    },
+    "Elk Grove, California": {
+        "population": 176124,
+        "coordinates": {
+            "longitude": 38.41,
+            "latitude": -121.38
+        }
+    },
+    "Shreveport, Louisiana": {
+        "population": 187593,
+        "coordinates": {
+            "longitude": 32.47,
+            "latitude": -93.79
+        }
+    },
+    "Eugene, Oregon": {
+        "population": 176654,
+        "coordinates": {
+            "longitude": 44.06,
+            "latitude": -123.12
+        }
+    },
+    "Aurora, Illinois": {
+        "population": 180542,
+        "coordinates": {
+            "longitude": 41.76,
+            "latitude": -88.29
+        }
+    },
+    "Salem, Oregon": {
+        "population": 175535,
+        "coordinates": {
+            "longitude": 44.92,
+            "latitude": -123.02
+        }
+    },
+    "Santa Rosa, California": {
+        "population": 178127,
+        "coordinates": {
+            "longitude": 38.45,
+            "latitude": -122.71
+        }
+    },
+    "Rancho Cucamonga, California": {
+        "population": 174453,
+        "coordinates": {
+            "longitude": 34.12,
+            "latitude": -117.56
+        }
+    },
+    "Pembroke Pines, Florida": {
+        "population": 171178,
+        "coordinates": {
+            "longitude": 26.01,
+            "latitude": -80.34
+        }
+    },
+    "Fort Collins, Colorado": {
+        "population": 169810,
+        "coordinates": {
+            "longitude": 40.55,
+            "latitude": -105.06
+        }
+    },
+    "Springfield, Missouri": {
+        "population": 169176,
+        "coordinates": {
+            "longitude": 37.19,
+            "latitude": -93.29
+        }
+    },
+    "Oceanside, California": {
+        "population": 174068,
+        "coordinates": {
+            "longitude": 33.22,
+            "latitude": -117.31
+        }
+    },
+    "Garden Grove, California": {
+        "population": 171949,
+        "coordinates": {
+            "longitude": 33.78,
+            "latitude": -117.96
+        }
+    },
+    "Lancaster, California": {
+        "population": 173516,
+        "coordinates": {
+            "longitude": 34.69,
+            "latitude": -118.18
+        }
+    },
+    "Murfreesboro, Tennessee": {
+        "population": 152769,
+        "coordinates": {
+            "longitude": 35.85,
+            "latitude": -86.42
+        }
+    },
+    "Palmdale, California": {
+        "population": 169450,
+        "coordinates": {
+            "longitude": 34.59,
+            "latitude": -118.11
+        }
+    },
+    "Corona, California": {
+        "population": 157136,
+        "coordinates": {
+            "longitude": 33.86,
+            "latitude": -117.57
+        }
+    },
+    "Killeen, Texas": {
+        "population": 153095,
+        "coordinates": {
+            "longitude": 31.08,
+            "latitude": -97.73
+        }
+    },
+    "Salinas, California": {
+        "population": 163542,
+        "coordinates": {
+            "longitude": 36.69,
+            "latitude": -121.63
+        }
+    },
+    "Roseville, California": {
+        "population": 147773,
+        "coordinates": {
+            "longitude": 38.77,
+            "latitude": -121.32
+        }
+    },
+    "Denton, Texas": {
+        "population": 139869,
+        "coordinates": {
+            "longitude": 33.22,
+            "latitude": -97.14
+        }
+    },
+    "Surprise, Arizona": {
+        "population": 143148,
+        "coordinates": {
+            "longitude": 33.67,
+            "latitude": -112.45
+        }
+    },
+    "Macon, Georgia": {
+        "population": 157346,
+        "coordinates": {
+            "longitude": 32.81,
+            "latitude": -83.69
+        }
+    },
+    "Paterson, New Jersey": {
+        "population": 159732,
+        "coordinates": {
+            "longitude": 40.91,
+            "latitude": -74.16
+        }
+    },
+    "Lakewood, Colorado": {
+        "population": 155984,
+        "coordinates": {
+            "longitude": 39.7,
+            "latitude": -105.12
+        }
+    },
+    "Hayward, California": {
+        "population": 162954,
+        "coordinates": {
+            "longitude": 37.63,
+            "latitude": -122.1
+        }
+    },
+    "Charleston, South Carolina": {
+        "population": 150227,
+        "coordinates": {
+            "longitude": 32.83,
+            "latitude": -79.97
+        }
+    },
+    "Alexandria, Virginia": {
+        "population": 159467,
+        "coordinates": {
+            "longitude": 38.82,
+            "latitude": -77.08
+        }
+    },
+    "Hollywood, Florida": {
+        "population": 153067,
+        "coordinates": {
+            "longitude": 26.03,
+            "latitude": -80.16
+        }
+    },
+    "Springfield, Massachusetts": {
+        "population": 155929,
+        "coordinates": {
+            "longitude": 42.12,
+            "latitude": -72.54
+        }
+    },
+    "Kansas City, Kansas": {
+        "population": 156607,
+        "coordinates": {
+            "longitude": 39.12,
+            "latitude": -94.74
+        }
+    },
+    "Sunnyvale, California": {
+        "population": 155805,
+        "coordinates": {
+            "longitude": 37.39,
+            "latitude": -122.03
+        }
+    },
+    "Bellevue, Washington": {
+        "population": 151854,
+        "coordinates": {
+            "longitude": 47.6,
+            "latitude": -122.16
+        }
+    },
+    "Joliet, Illinois": {
+        "population": 150362,
+        "coordinates": {
+            "longitude": 41.52,
+            "latitude": -88.15
+        }
+    },
+    "Naperville, Illinois": {
+        "population": 149540,
+        "coordinates": {
+            "longitude": 41.75,
+            "latitude": -88.16
+        }
+    },
+    "Escondido, California": {
+        "population": 151038,
+        "coordinates": {
+            "longitude": 33.13,
+            "latitude": -117.07
+        }
+    },
+    "Bridgeport, Connecticut": {
+        "population": 148654,
+        "coordinates": {
+            "longitude": 41.19,
+            "latitude": -73.2
+        }
+    },
+    "Savannah, Georgia": {
+        "population": 147780,
+        "coordinates": {
+            "longitude": 32.0,
+            "latitude": -81.15
+        }
+    },
+    "Olathe, Kansas": {
+        "population": 141290,
+        "coordinates": {
+            "longitude": 38.88,
+            "latitude": -94.82
+        }
+    },
+    "Mesquite, Texas": {
+        "population": 150108,
+        "coordinates": {
+            "longitude": 32.76,
+            "latitude": -96.59
+        }
+    },
+    "Pasadena, Texas": {
+        "population": 151950,
+        "coordinates": {
+            "longitude": 29.65,
+            "latitude": -95.15
+        }
+    },
+    "McAllen, Texas": {
+        "population": 142210,
+        "coordinates": {
+            "longitude": 26.22,
+            "latitude": -98.25
+        }
+    },
+    "Rockford, Illinois": {
+        "population": 148655,
+        "coordinates": {
+            "longitude": 42.26,
+            "latitude": -89.06
+        }
+    },
+    "Gainesville, Florida": {
+        "population": 141085,
+        "coordinates": {
+            "longitude": 29.68,
+            "latitude": -82.35
+        }
+    },
+    "Syracuse, New York": {
+        "population": 148620,
+        "coordinates": {
+            "longitude": 43.04,
+            "latitude": -76.14
+        }
+    },
+    "Pomona, California": {
+        "population": 151713,
+        "coordinates": {
+            "longitude": 34.06,
+            "latitude": -117.76
+        }
+    },
+    "Visalia, California": {
+        "population": 141384,
+        "coordinates": {
+            "longitude": 36.33,
+            "latitude": -119.33
+        }
+    },
+    "Thornton, Colorado": {
+        "population": 141867,
+        "coordinates": {
+            "longitude": 39.92,
+            "latitude": -104.94
+        }
+    },
+    "Waco, Texas": {
+        "population": 138486,
+        "coordinates": {
+            "longitude": 31.56,
+            "latitude": -97.19
+        }
+    },
+    "Jackson, Mississippi": {
+        "population": 153701,
+        "coordinates": {
+            "longitude": 32.32,
+            "latitude": -90.21
+        }
+    },
+    "Columbia, South Carolina": {
+        "population": 136632,
+        "coordinates": {
+            "longitude": 34.04,
+            "latitude": -80.91
+        }
+    },
+    "Lakewood Township, New Jersey": {
+        "population": 135158,
+        "coordinates": {
+            "longitude": 40.08,
+            "latitude": -74.2
+        }
+    },
+    "Fullerton, California": {
+        "population": 143617,
+        "coordinates": {
+            "longitude": 33.89,
+            "latitude": -117.93
+        }
+    },
+    "Torrance, California": {
+        "population": 147067,
+        "coordinates": {
+            "longitude": 33.83,
+            "latitude": -118.36
+        }
+    },
+    "Victorville, California": {
+        "population": 134810,
+        "coordinates": {
+            "longitude": 34.53,
+            "latitude": -117.35
+        }
+    },
+    "Midland, Texas": {
+        "population": 132524,
+        "coordinates": {
+            "longitude": 32.02,
+            "latitude": -102.11
+        }
+    },
+    "Orange, California": {
+        "population": 139911,
+        "coordinates": {
+            "longitude": 33.79,
+            "latitude": -117.86
+        }
+    },
+    "Miramar, Florida": {
+        "population": 134721,
+        "coordinates": {
+            "longitude": 25.97,
+            "latitude": -80.34
+        }
+    },
+    "Hampton, Virginia": {
+        "population": 137148,
+        "coordinates": {
+            "longitude": 37.05,
+            "latitude": -76.3
+        }
+    },
+    "Warren, Michigan": {
+        "population": 139387,
+        "coordinates": {
+            "longitude": 42.49,
+            "latitude": -83.03
+        }
+    },
+    "Stamford, Connecticut": {
+        "population": 135470,
+        "coordinates": {
+            "longitude": 41.08,
+            "latitude": -73.55
+        }
+    },
+    "Cedar Rapids, Iowa": {
+        "population": 137710,
+        "coordinates": {
+            "longitude": 41.97,
+            "latitude": -91.68
+        }
+    },
+    "Elizabeth, New Jersey": {
+        "population": 137298,
+        "coordinates": {
+            "longitude": 40.67,
+            "latitude": -74.19
+        }
+    },
+    "Palm Bay, Florida": {
+        "population": 119760,
+        "coordinates": {
+            "longitude": 27.96,
+            "latitude": -80.66
+        }
+    },
+    "Dayton, Ohio": {
+        "population": 137644,
+        "coordinates": {
+            "longitude": 39.78,
+            "latitude": -84.2
+        }
+    },
+    "New Haven, Connecticut": {
+        "population": 134023,
+        "coordinates": {
+            "longitude": 41.31,
+            "latitude": -72.92
+        }
+    },
+    "Coral Springs, Florida": {
+        "population": 134394,
+        "coordinates": {
+            "longitude": 26.27,
+            "latitude": -80.26
+        }
+    },
+    "Meridian, Idaho": {
+        "population": 117635,
+        "coordinates": {
+            "longitude": 43.61,
+            "latitude": -116.4
+        }
+    },
+    "West Valley City, Utah": {
+        "population": 140230,
+        "coordinates": {
+            "longitude": 40.69,
+            "latitude": -112.01
+        }
+    },
+    "Pasadena, California": {
+        "population": 138699,
+        "coordinates": {
+            "longitude": 34.16,
+            "latitude": -118.14
+        }
+    },
+    "Lewisville, Texas": {
+        "population": 111822,
+        "coordinates": {
+            "longitude": 33.05,
+            "latitude": -96.98
+        }
+    },
+    "Kent, Washington": {
+        "population": 136588,
+        "coordinates": {
+            "longitude": 47.39,
+            "latitude": -122.21
+        }
+    },
+    "Sterling Heights, Michigan": {
+        "population": 134346,
+        "coordinates": {
+            "longitude": 42.58,
+            "latitude": -83.03
+        }
+    },
+    "Fargo, North Dakota": {
+        "population": 125990,
+        "coordinates": {
+            "longitude": 46.86,
+            "latitude": -96.83
+        }
+    },
+    "Carrollton, Texas": {
+        "population": 133434,
+        "coordinates": {
+            "longitude": 32.99,
+            "latitude": -96.9
+        }
+    },
+    "Santa Clara, California": {
+        "population": 127647,
+        "coordinates": {
+            "longitude": 37.36,
+            "latitude": -121.97
+        }
+    },
+    "Round Rock, Texas": {
+        "population": 119468,
+        "coordinates": {
+            "longitude": 30.53,
+            "latitude": -97.66
+        }
+    },
+    "Norman, Oklahoma": {
+        "population": 128026,
+        "coordinates": {
+            "longitude": 35.24,
+            "latitude": -97.35
+        }
+    },
+    "Columbia, Missouri": {
+        "population": 126254,
+        "coordinates": {
+            "longitude": 38.95,
+            "latitude": -92.33
+        }
+    },
+    "Abilene, Texas": {
+        "population": 125182,
+        "coordinates": {
+            "longitude": 32.45,
+            "latitude": -99.74
+        }
+    },
+    "Athens, Georgia": {
+        "population": 127315,
+        "coordinates": {
+            "longitude": 33.95,
+            "latitude": -83.37
+        }
+    },
+    "Pearland, Texas": {
+        "population": 125828,
+        "coordinates": {
+            "longitude": 29.56,
+            "latitude": -95.32
+        }
+    },
+    "Clovis, California": {
+        "population": 120124,
+        "coordinates": {
+            "longitude": 36.83,
+            "latitude": -119.68
+        }
+    },
+    "Topeka, Kansas": {
+        "population": 126587,
+        "coordinates": {
+            "longitude": 39.03,
+            "latitude": -95.69
+        }
+    },
+    "College Station, Texas": {
+        "population": 120511,
+        "coordinates": {
+            "longitude": 30.59,
+            "latitude": -96.3
+        }
+    },
+    "Simi Valley, California": {
+        "population": 126356,
+        "coordinates": {
+            "longitude": 34.27,
+            "latitude": -118.75
+        }
+    },
+    "Allentown, Pennsylvania": {
+        "population": 125845,
+        "coordinates": {
+            "longitude": 40.59,
+            "latitude": -75.48
+        }
+    },
+    "West Palm Beach, Florida": {
+        "population": 117415,
+        "coordinates": {
+            "longitude": 26.75,
+            "latitude": -80.13
+        }
+    },
+    "Thousand Oaks, California": {
+        "population": 126966,
+        "coordinates": {
+            "longitude": 34.19,
+            "latitude": -118.87
+        }
+    },
+    "Vallejo, California": {
+        "population": 126090,
+        "coordinates": {
+            "longitude": 38.11,
+            "latitude": -122.26
+        }
+    },
+    "Wilmington, North Carolina": {
+        "population": 115451,
+        "coordinates": {
+            "longitude": 34.21,
+            "latitude": -77.89
+        }
+    },
+    "Rochester, Minnesota": {
+        "population": 121395,
+        "coordinates": {
+            "longitude": 44.02,
+            "latitude": -92.48
+        }
+    },
+    "Concord, California": {
+        "population": 125410,
+        "coordinates": {
+            "longitude": 37.97,
+            "latitude": -122.0
+        }
+    },
+    "Lakeland, Florida": {
+        "population": 112641,
+        "coordinates": {
+            "longitude": 28.06,
+            "latitude": -81.95
+        }
+    },
+    "North Charleston, South Carolina": {
+        "population": 114852,
+        "coordinates": {
+            "longitude": 32.92,
+            "latitude": -80.07
+        }
+    },
+    "Lafayette, Louisiana": {
+        "population": 121374,
+        "coordinates": {
+            "longitude": 30.21,
+            "latitude": -92.03
+        }
+    },
+    "Arvada, Colorado": {
+        "population": 124402,
+        "coordinates": {
+            "longitude": 39.83,
+            "latitude": -105.15
+        }
+    },
+    "Independence, Missouri": {
+        "population": 123011,
+        "coordinates": {
+            "longitude": 39.09,
+            "latitude": -94.35
+        }
+    },
+    "Billings, Montana": {
+        "population": 117116,
+        "coordinates": {
+            "longitude": 45.79,
+            "latitude": -108.55
+        }
+    },
+    "Fairfield, California": {
+        "population": 119881,
+        "coordinates": {
+            "longitude": 38.26,
+            "latitude": -122.03
+        }
+    },
+    "Hartford, Connecticut": {
+        "population": 121054,
+        "coordinates": {
+            "longitude": 41.77,
+            "latitude": -72.68
+        }
+    },
+    "Ann Arbor, Michigan": {
+        "population": 123851,
+        "coordinates": {
+            "longitude": 42.28,
+            "latitude": -83.73
+        }
+    },
+    "Broken Arrow, Oklahoma": {
+        "population": 113540,
+        "coordinates": {
+            "longitude": 36.04,
+            "latitude": -95.78
+        }
+    },
+    "Berkeley, California": {
+        "population": 124321,
+        "coordinates": {
+            "longitude": 37.87,
+            "latitude": -122.3
+        }
+    },
+    "Cambridge, Massachusetts": {
+        "population": 118403,
+        "coordinates": {
+            "longitude": 42.38,
+            "latitude": -71.12
+        }
+    },
+    "Richardson, Texas": {
+        "population": 119469,
+        "coordinates": {
+            "longitude": 32.97,
+            "latitude": -96.71
+        }
+    },
+    "Antioch, California": {
+        "population": 115291,
+        "coordinates": {
+            "longitude": 37.98,
+            "latitude": -121.8
+        }
+    },
+    "High Point, North Carolina": {
+        "population": 114059,
+        "coordinates": {
+            "longitude": 35.99,
+            "latitude": -79.99
+        }
+    },
+    "Clearwater, Florida": {
+        "population": 117292,
+        "coordinates": {
+            "longitude": 27.98,
+            "latitude": -82.77
+        }
+    },
+    "League City, Texas": {
+        "population": 114392,
+        "coordinates": {
+            "longitude": 29.49,
+            "latitude": -95.11
+        }
+    },
+    "Odessa, Texas": {
+        "population": 114428,
+        "coordinates": {
+            "longitude": 31.88,
+            "latitude": -102.35
+        }
+    },
+    "Manchester, New Hampshire": {
+        "population": 115644,
+        "coordinates": {
+            "longitude": 42.98,
+            "latitude": -71.44
+        }
+    },
+    "Evansville, Indiana": {
+        "population": 117298,
+        "coordinates": {
+            "longitude": 37.99,
+            "latitude": -87.53
+        }
+    },
+    "Waterbury, Connecticut": {
+        "population": 114403,
+        "coordinates": {
+            "longitude": 41.56,
+            "latitude": -73.04
+        }
+    },
+    "West Jordan, Utah": {
+        "population": 116961,
+        "coordinates": {
+            "longitude": 40.6,
+            "latitude": -112.0
+        }
+    },
+    "Las Cruces, New Mexico": {
+        "population": 111385,
+        "coordinates": {
+            "longitude": 32.33,
+            "latitude": -106.79
+        }
+    },
+    "Westminster, Colorado": {
+        "population": 116317,
+        "coordinates": {
+            "longitude": 39.88,
+            "latitude": -105.06
+        }
+    },
+    "Lowell, Massachusetts": {
+        "population": 115554,
+        "coordinates": {
+            "longitude": 42.64,
+            "latitude": -71.32
+        }
+    },
+    "Nampa, Idaho": {
+        "population": 100200,
+        "coordinates": {
+            "longitude": 43.58,
+            "latitude": -116.56
+        }
+    },
+    "Richmond, California": {
+        "population": 116448,
+        "coordinates": {
+            "longitude": 37.95,
+            "latitude": -122.36
+        }
+    },
+    "Pompano Beach, Florida": {
+        "population": 112046,
+        "coordinates": {
+            "longitude": 26.24,
+            "latitude": -80.13
+        }
+    },
+    "Carlsbad, California": {
+        "population": 114746,
+        "coordinates": {
+            "longitude": 33.13,
+            "latitude": -117.28
+        }
+    },
+    "Menifee, California": {
+        "population": 102527,
+        "coordinates": {
+            "longitude": 33.69,
+            "latitude": -117.18
+        }
+    },
+    "Provo, Utah": {
+        "population": 115162,
+        "coordinates": {
+            "longitude": 40.25,
+            "latitude": -111.65
+        }
+    },
+    "Elgin, Illinois": {
+        "population": 114797,
+        "coordinates": {
+            "longitude": 42.04,
+            "latitude": -88.33
+        }
+    },
+    "Greeley, Colorado": {
+        "population": 108795,
+        "coordinates": {
+            "longitude": 40.41,
+            "latitude": -104.77
+        }
+    },
+    "Springfield, Illinois": {
+        "population": 114394,
+        "coordinates": {
+            "longitude": 39.79,
+            "latitude": -89.64
+        }
+    },
+    "Beaumont, Texas": {
+        "population": 115282,
+        "coordinates": {
+            "longitude": 30.08,
+            "latitude": -94.15
+        }
+    },
+    "Lansing, Michigan": {
+        "population": 112644,
+        "coordinates": {
+            "longitude": 42.71,
+            "latitude": -84.56
+        }
+    },
+    "Murrieta, California": {
+        "population": 110949,
+        "coordinates": {
+            "longitude": 33.57,
+            "latitude": -117.19
+        }
+    },
+    "Goodyear, Arizona": {
+        "population": 95294,
+        "coordinates": {
+            "longitude": 33.25,
+            "latitude": -112.37
+        }
+    },
+    "Allen, Texas": {
+        "population": 104627,
+        "coordinates": {
+            "longitude": 33.11,
+            "latitude": -96.67
+        }
+    },
+    "Tuscaloosa, Alabama": {
+        "population": 99600,
+        "coordinates": {
+            "longitude": 33.23,
+            "latitude": -87.53
+        }
+    },
+    "Everett, Washington": {
+        "population": 110629,
+        "coordinates": {
+            "longitude": 47.95,
+            "latitude": -122.19
+        }
+    },
+    "Pueblo, Colorado": {
+        "population": 111876,
+        "coordinates": {
+            "longitude": 38.27,
+            "latitude": -104.61
+        }
+    },
+    "New Braunfels, Texas": {
+        "population": 90403,
+        "coordinates": {
+            "longitude": 29.7,
+            "latitude": -98.12
+        }
+    },
+    "South Fulton, Georgia": {
+        "population": 107436,
+        "coordinates": {
+            "longitude": 33.66,
+            "latitude": -84.57
+        }
+    },
+    "Miami Gardens, Florida": {
+        "population": 111640,
+        "coordinates": {
+            "longitude": 25.95,
+            "latitude": -80.24
+        }
+    },
+    "Gresham, Oregon": {
+        "population": 114247,
+        "coordinates": {
+            "longitude": 45.5,
+            "latitude": -122.44
+        }
+    },
+    "Temecula, California": {
+        "population": 110003,
+        "coordinates": {
+            "longitude": 33.49,
+            "latitude": -117.13
+        }
+    },
+    "Rio Rancho, New Mexico": {
+        "population": 104046,
+        "coordinates": {
+            "longitude": 35.29,
+            "latitude": -106.7
+        }
+    },
+    "Peoria, Illinois": {
+        "population": 113150,
+        "coordinates": {
+            "longitude": 40.75,
+            "latitude": -89.62
+        }
+    },
+    "Tyler, Texas": {
+        "population": 105995,
+        "coordinates": {
+            "longitude": 32.32,
+            "latitude": -95.31
+        }
+    },
+    "Sparks, Nevada": {
+        "population": 108445,
+        "coordinates": {
+            "longitude": 39.57,
+            "latitude": -119.72
+        }
+    },
+    "Concord, North Carolina": {
+        "population": 105240,
+        "coordinates": {
+            "longitude": 35.39,
+            "latitude": -80.64
+        }
+    },
+    "Santa Maria, California": {
+        "population": 109707,
+        "coordinates": {
+            "longitude": 34.93,
+            "latitude": -120.44
+        }
+    },
+    "Ventura, California": {
+        "population": 110763,
+        "coordinates": {
+            "longitude": 34.27,
+            "latitude": -119.25
+        }
+    },
+    "Buckeye, Arizona": {
+        "population": 91502,
+        "coordinates": {
+            "longitude": 33.43,
+            "latitude": -112.64
+        }
+    },
+    "Downey, California": {
+        "population": 114355,
+        "coordinates": {
+            "longitude": 33.94,
+            "latitude": -118.13
+        }
+    },
+    "Sugar Land, Texas": {
+        "population": 111026,
+        "coordinates": {
+            "longitude": 29.59,
+            "latitude": -95.63
+        }
+    },
+    "Costa Mesa, California": {
+        "population": 111918,
+        "coordinates": {
+            "longitude": 33.67,
+            "latitude": -117.91
+        }
+    },
+    "Conroe, Texas": {
+        "population": 89956,
+        "coordinates": {
+            "longitude": 30.32,
+            "latitude": -95.49
+        }
+    },
+    "Spokane Valley, Washington": {
+        "population": 102976,
+        "coordinates": {
+            "longitude": 47.66,
+            "latitude": -117.23
+        }
+    },
+    "Davie, Florida": {
+        "population": 105691,
+        "coordinates": {
+            "longitude": 26.08,
+            "latitude": -80.28
+        }
+    },
+    "Hillsboro, Oregon": {
+        "population": 106447,
+        "coordinates": {
+            "longitude": 45.53,
+            "latitude": -122.94
+        }
+    },
+    "Jurupa Valley, California": {
+        "population": 105053,
+        "coordinates": {
+            "longitude": 34.0,
+            "latitude": -117.47
+        }
+    },
+    "Centennial, Colorado": {
+        "population": 108418,
+        "coordinates": {
+            "longitude": 39.59,
+            "latitude": -104.87
+        }
+    },
+    "Edison, New Jersey": {
+        "population": 107588,
+        "coordinates": {
+            "longitude": 40.5,
+            "latitude": -74.35
+        }
+    },
+    "Boulder, Colorado": {
+        "population": 108250,
+        "coordinates": {
+            "longitude": 40.02,
+            "latitude": -105.25
+        }
+    },
+    "Dearborn, Michigan": {
+        "population": 109976,
+        "coordinates": {
+            "longitude": 42.31,
+            "latitude": -83.21
+        }
+    },
+    "Edinburg, Texas": {
+        "population": 100243,
+        "coordinates": {
+            "longitude": 26.32,
+            "latitude": -98.16
+        }
+    },
+    "Sandy Springs, Georgia": {
+        "population": 108080,
+        "coordinates": {
+            "longitude": 33.93,
+            "latitude": -84.37
+        }
+    },
+    "Green Bay, Wisconsin": {
+        "population": 107395,
+        "coordinates": {
+            "longitude": 44.52,
+            "latitude": -87.99
+        }
+    },
+    "West Covina, California": {
+        "population": 109501,
+        "coordinates": {
+            "longitude": 34.06,
+            "latitude": -117.91
+        }
+    },
+    "Brockton, Massachusetts": {
+        "population": 105643,
+        "coordinates": {
+            "longitude": 42.08,
+            "latitude": -71.02
+        }
+    },
+    "St. George, Utah": {
+        "population": 95342,
+        "coordinates": {
+            "longitude": 37.08,
+            "latitude": -113.56
+        }
+    },
+    "Bend, Oregon": {
+        "population": 99178,
+        "coordinates": {
+            "longitude": 44.06,
+            "latitude": -121.31
+        }
+    },
+    "Renton, Washington": {
+        "population": 106785,
+        "coordinates": {
+            "longitude": 47.48,
+            "latitude": -122.19
+        }
+    },
+    "Lee's Summit, Missouri": {
+        "population": 101108,
+        "coordinates": {
+            "longitude": 38.92,
+            "latitude": -94.38
+        }
+    },
+    "Fishers, Indiana": {
+        "population": 98977,
+        "coordinates": {
+            "longitude": 39.96,
+            "latitude": -85.97
+        }
+    },
+    "El Monte, California": {
+        "population": 109450,
+        "coordinates": {
+            "longitude": 34.07,
+            "latitude": -118.03
+        }
+    },
+    "South Bend, Indiana": {
+        "population": 103453,
+        "coordinates": {
+            "longitude": 41.68,
+            "latitude": -86.27
+        }
+    },
+    "Rialto, California": {
+        "population": 104026,
+        "coordinates": {
+            "longitude": 34.12,
+            "latitude": -117.39
+        }
+    },
+    "Woodbridge Township, New Jersey": {
+        "population": 103639,
+        "coordinates": {
+            "longitude": 40.56,
+            "latitude": -74.29
+        }
+    },
+    "El Cajon, California": {
+        "population": 106215,
+        "coordinates": {
+            "longitude": 32.8,
+            "latitude": -116.96
+        }
+    },
+    "Inglewood, California": {
+        "population": 107762,
+        "coordinates": {
+            "longitude": 33.96,
+            "latitude": -118.34
+        }
+    },
+    "Burbank, California": {
+        "population": 107337,
+        "coordinates": {
+            "longitude": 34.19,
+            "latitude": -118.33
+        }
+    },
+    "Wichita Falls, Texas": {
+        "population": 102316,
+        "coordinates": {
+            "longitude": 33.91,
+            "latitude": -98.53
+        }
+    },
+    "Vacaville, California": {
+        "population": 102386,
+        "coordinates": {
+            "longitude": 38.36,
+            "latitude": -121.97
+        }
+    },
+    "Carmel, Indiana": {
+        "population": 99757,
+        "coordinates": {
+            "longitude": 39.97,
+            "latitude": -86.15
+        }
+    },
+    "Palm Coast, Florida": {
+        "population": 89258,
+        "coordinates": {
+            "longitude": 29.54,
+            "latitude": -81.24
+        }
+    },
+    "Fayetteville, Arkansas": {
+        "population": 93949,
+        "coordinates": {
+            "longitude": 36.07,
+            "latitude": -94.17
+        }
+    },
+    "Quincy, Massachusetts": {
+        "population": 101636,
+        "coordinates": {
+            "longitude": 42.26,
+            "latitude": -71.01
+        }
+    },
+    "San Mateo, California": {
+        "population": 105661,
+        "coordinates": {
+            "longitude": 37.56,
+            "latitude": -122.31
+        }
+    },
+    "Chico, California": {
+        "population": 101475,
+        "coordinates": {
+            "longitude": 39.76,
+            "latitude": -121.82
+        }
+    },
+    "Lynn, Massachusetts": {
+        "population": 101253,
+        "coordinates": {
+            "longitude": 42.47,
+            "latitude": -70.96
+        }
+    },
+    "Albany, New York": {
+        "population": 99224,
+        "coordinates": {
+            "longitude": 42.67,
+            "latitude": -73.8
+        }
+    },
+    "Yuma, Arizona": {
+        "population": 95548,
+        "coordinates": {
+            "longitude": 32.52,
+            "latitude": -114.52
+        }
+    },
+    "New Bedford, Massachusetts": {
+        "population": 101079,
+        "coordinates": {
+            "longitude": 41.66,
+            "latitude": -70.94
+        }
+    },
+    "Suffolk, Virginia": {
+        "population": 94324,
+        "coordinates": {
+            "longitude": 36.7,
+            "latitude": -76.63
+        }
+    },
+    "Hesperia, California": {
+        "population": 99818,
+        "coordinates": {
+            "longitude": 34.4,
+            "latitude": -117.32
+        }
+    },
+    "Davenport, Iowa": {
+        "population": 101724,
+        "coordinates": {
+            "longitude": 41.56,
+            "latitude": -90.6
+        }
+    }
+}
