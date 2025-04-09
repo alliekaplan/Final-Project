@@ -1,7 +1,6 @@
 from bs4 import BeautifulSoup
 import requests
 import sqlite3
-import json
 import os
 
 def get_populations(): #Gets Population for each state 
@@ -32,14 +31,14 @@ def get_populations(): #Gets Population for each state
 
     return city_data
 
-def create_database(db_name): 
+def create_database(db_name): #Creates database
     
     path = os.path.dirname(os.path.abspath(__file__))
     conn = sqlite3.connect(path + "/" + db_name)
     cur = conn.cursor()
     return cur, conn
 
-def create_states_table(data, cur, conn):
+def create_states_table(data, cur, conn): #Creates States table
     states = []
     for city, population in data.items():
         state = city.split(',')[1]
@@ -51,7 +50,7 @@ def create_states_table(data, cur, conn):
         cur.execute("INSERT OR IGNORE INTO States (id, state) VALUES (?,?)", (i, states[i]))
     conn.commit()
 
-def create_citybike_table(data, cur, conn):
+def create_citybike_table(data, cur, conn): #Creates City_Bike Table
     cur.execute('DROP TABLE IF EXISTS City_Bike')
     cur.execute('''CREATE TABLE IF NOT EXISTS City_Bike (id INTEGER PRIMARY KEY AUTOINCREMENT, 
                 city TEXT, state_id INTEGER, long INTEGER, lat INTEGER, city_bike INTEGER, 
