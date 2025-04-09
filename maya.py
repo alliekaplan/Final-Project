@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup
 import requests
 import sqlite3
 import json
+import os
 
 def get_populations(): #Gets Population for each state 
     url = "https://en.wikipedia.org/wiki/List_of_United_States_cities_by_population"
@@ -35,6 +36,27 @@ def get_populations(): #Gets Population for each state
             }
         }
 
-    print(city_data)
+    return city_data
 
-get_populations()
+def create_database(db_name): 
+    
+    path = os.path.dirname(os.path.abspath(__file__))
+    conn = sqlite3.connect(path + "/" + db_name)
+    cur = conn.cursor()
+    return cur, conn
+
+def create_states_table(data, cur, conn):
+    states = []
+    for city, info in data.items():
+        state = city.split(',')[1]
+        if state not in states:
+            states.append(state)
+
+    cur.execute("CREATE TABLE IF NOT EXISTS States (id INTEGER PRIMARY KEY, state TEXT)")
+    for i in range(len(states)):
+        cur.execute("INSERT OR IGNORE INTO States (id, state) VALUES (?,?)", (i, states[i]))
+    conn.commit()
+
+data = get_populations()
+cur, conn = create_database("citybike.db")
+create_states_table(data, cur, conn)
