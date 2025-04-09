@@ -1,7 +1,4 @@
 import requests
-import time
-
-
 #Getting City Bike API
 city_bikes_url = "http://api.citybik.es/v2/networks"
 city_bikes_response = requests.get(city_bikes_url)
@@ -13,25 +10,3 @@ print(f"Found {len(us_networks)} bike networks in the US.")
 
 for network in us_networks:
     print(f"{network['name']} in {network['location']['city']} ({network['id']})")
-
-
-#Getting Weather API
-import requests
-
-weather_headers = {
-    "User-Agent": "(myweatherapp.com, contact@myweatherapp.com)",
-    "Accept": "application/ld+json"}
-
-# Example coordinates for New York, NY
-lat, lon = 40.7128, -74.0060
-
-weather_url = f"https://api.weather.gov/points/{lat},{lon}"
-weather_response = requests.get(weather_url, weather_headers)
-weather_data = weather_response.json()
-
-# Get the forecast URL
-forecast_url = weather_data["properties"]["forecast"]
-print("Forecast URL:", forecast_url)
-
-
-
