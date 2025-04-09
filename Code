@@ -1,12 +1,17 @@
 import requests
-#Getting City Bike API
-city_bikes_url = "http://api.citybik.es/v2/networks"
-city_bikes_response = requests.get(city_bikes_url)
-city_bikes_data = city_bikes_response.json()
-networks = city_bikes_data["networks"]
 
-us_networks = [n for n in networks if n["location"]["country"] == "US"]
-print(f"Found {len(us_networks)} bike networks in the US.")
+networks = requests.get("http://api.citybik.es/v2/networks").json()['networks']
+us_networks = [n for n in networks if n['location']['country'] == 'US'] #get US cities only
+bike_availability = {}
 
-for network in us_networks:
-    print(f"{network['name']} in {network['location']['city']} ({network['id']})")
+#get the number of available bikes
+for net in us_networks:
+    network_id = net['id']
+    city = net['location']['city']
+    url = f"http://api.citybik.es/v2/networks/{network_id}"
+    data = requests.get(url).json()
+    stations = data['network']['stations']
+    total_bikes = sum(station['free_bikes'] or 0 for station in stations)
+    bike_availability[city] = total_bikes
+print(bike_availability)
+
