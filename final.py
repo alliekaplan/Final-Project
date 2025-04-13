@@ -6,8 +6,7 @@ import json
 import matplotlib
 import matplotlib.pyplot as plt
 
-#MAYAS:
-
+#MAYA'S:
 def get_populations(): #Gets Population for each state 
     url = "https://en.wikipedia.org/wiki/List_of_United_States_cities_by_population"
 
@@ -81,8 +80,7 @@ def create_citybike_table(data, cur, conn): #Creates City_Bike Table
         
         conn.commit()
 
-#ALLIES:
-
+#ALLIE'S:
 def city_bikes():
     networks = requests.get("http://api.citybik.es/v2/networks").json()
     #print(networks)
@@ -117,8 +115,8 @@ def city_bikes():
 
     return bike_availability
 
-#MAKE GRAPH FOR AVERAGE CITY BIKES PER STATE 
-#Step 1
+#MAKE GRAPH FOR AVERAGE CITY BIKES PER STATE - Maya and Allie
+#Step 1: Load data in database
 def add_city_bikes(bike_data,cur,conn): #Used ChatGPT to help the function run when the API hits too many requests
     if isinstance(bike_data, dict):
         for city, bike_number in bike_data.items():
@@ -139,7 +137,7 @@ def add_city_bikes(bike_data,cur,conn): #Used ChatGPT to help the function run w
 
     conn.commit()
 
-#Step 2: JOIN tables and calculate AVG
+#Step 2: Join tables and calculate AVG
 def avg_bikes_by_state(cur, conn): #Used ChatGPT to help use SQLlite AVG() function
     cur.execute('''
         SELECT States.state, AVG(City_Bike.city_bike) AS avg_bikes
@@ -170,9 +168,64 @@ def avg_bike_by_state_graph(cur, conn):
     plt.xticks(rotation=90)
     plt.show()
 
+#MAKE GRAPH FOR AVERAGE POP PER STATES W/ BIKES - Maya and Allie
+#Step 1: JOIN tables and calculate AVG
+def avg_pop_per_state(cur, conn):
+    cur.execute('''SELECT States.state, AVG(City_Bike.pop) AS avg_pop
+                FROM City_Bike
+                JOIN States on City_Bike.state_id = States.id
+                WHERE City_Bike.city_bike IS NOT NULL
+                GROUP BY States.state''')
 
-#SAMYS:
+    return cur.fetchall()
 
+#Step 2: Make Graph
+def avg_pop_per_state_graph(cur, conn):
+    data = avg_pop_per_state(cur, conn)
+    states = []
+    pops = []
+    for state, pop in data:
+        states.append(state)
+        pops.append(pop)
+    plt.figure(figsize=(10, 5))
+    plt.bar(states, pops, color='blue')
+    plt.xlabel('States')
+    plt.ylabel('Average Population')
+    plt.title('Average Population Per State with City Bikes')
+    plt.xticks(rotation=90)
+    plt.show()
+
+#MAKE GRAPH FOR AVG POPULATION BY NUMBER OF BIKES - Maya and Allie
+#Step 1: JOIN tables and calculate AVG
+def avg_pop_and_bikes_per_state(cur, conn):
+    cur.execute('''
+        SELECT States.state, AVG(City_Bike.pop) AS avg_pop, AVG(City_Bike.city_bike) AS avg_bikes
+        FROM City_Bike
+        JOIN States ON City_Bike.state_id = States.id
+        GROUP BY States.state
+    ''')
+    return cur.fetchall()
+
+#Step 2: Make Graph
+def avg_pop_bikes_scatter_plot(cur, conn):
+    data = avg_pop_and_bikes_per_state(cur, conn)
+    states = []
+    avg_pops = []
+    avg_bikes = []
+    for state, avg_pop, avg_bike in data:
+        states.append(state)
+        avg_pops.append(avg_pop)
+        avg_bikes.append(avg_bike)
+
+    plt.figure(figsize=(10, 6))
+    plt.scatter(avg_pops, avg_bikes, color='blue')
+    plt.xlabel('Average Population of State')
+    plt.ylabel('Average Number of City Bikes')
+    plt.title('Scatter Plot: Population vs. Average City Bikes per State')
+    plt.show()
+
+
+#SAMY'S:
 # def get_temperature(latitude, longitude):
 #     headers = {
 #         'User-Agent': 'MyWeatherApp (mayagordon6@gmail.com)'
@@ -207,7 +260,7 @@ def avg_bike_by_state_graph(cur, conn):
 #     print(weather_info)
 
         
-
+#Function Calls
 data = get_populations()
 cur, conn = create_database("citybike.db")
 create_states_table(data, cur, conn)
@@ -225,3 +278,5 @@ else:
 # avg_weather(data, bike_data)
 avg_bikes_by_state(cur, conn)
 avg_bike_by_state_graph(cur, conn)
+avg_pop_per_state_graph(cur, conn)
+avg_pop_bikes_scatter_plot(cur, conn)
