@@ -2,6 +2,9 @@ from bs4 import BeautifulSoup
 import requests
 import sqlite3
 import os
+import json
+
+#MAYAS:
 
 def get_populations(): #Gets Population for each state 
     url = "https://en.wikipedia.org/wiki/List_of_United_States_cities_by_population"
@@ -24,8 +27,8 @@ def get_populations(): #Gets Population for each state
             population = int(cols[3].text.strip().replace(',', ''))
             longlat_full = cols[9].text.strip().split(' / ')
             cords = longlat_full[-1].split()
-            long = float(cords[0].replace(';', ''))
-            lat = float(cords[1].replace('\ufeff', ''))
+            lat = float(cords[0].replace(';', ''))
+            long = float(cords[1].replace('\ufeff', ''))
         
             city_data[f"{city}, {state}"] = {
             "population": population,
@@ -78,50 +81,91 @@ def create_citybike_table(data, cur, conn): #Creates City_Bike Table
 
 #ALLIES:
 
-# def city_bikes():
-#     networks = requests.get("http://api.citybik.es/v2/networks").json()
-#     print(networks)
-#     if "networks" not in networks:
-#        print("Too many requests")
-#        return None
-#     networks = networks["networks"]
-#     us_networks = [n for n in networks if n['location']['country'] == 'US'] #get US cities only
-#     bike_availability = {}
+def city_bikes():
+    networks = requests.get("http://api.citybik.es/v2/networks").json()
+    #print(networks)
+    if "networks" not in networks:
+       print("Too many requests")
+       return None
+    networks = networks["networks"]
+    us_networks = [n for n in networks if n['location']['country'] == 'US'] #get US cities only
+    bike_availability = {}
 
-#     #get the number of available bikes
-#     for net in us_networks:
-#         network_id = net['id']
-#         city = net['location']['city']
-#         if city == "New York, NY":
-#             city == "New York City, NY"
-#         url = f"http://api.citybik.es/v2/networks/{network_id}"
-#         data = requests.get(url).json()
-#         #print(data)
-#         stations = data['network']['stations']
-#         #print(stations)
-#         total_bikes = 0
-#         for station in stations:
-#             free = station.get('free_bikes') or 0
-#             empty = station.get('empty_slots') or 0
-#             total_capacity = free + empty
-#             total_bikes += total_capacity
-#         bike_availability[city] = total_bikes
-#     return bike_availability
+    #get the number of available bikes
+    for net in us_networks:
+        network_id = net['id']
+        city = net['location']['city']
+        if city == "New York, NY":
+            city = "New York City, NY"
+        url = f"http://api.citybik.es/v2/networks/{network_id}"
+        data = requests.get(url).json()
+        #print(data)
+        stations = data['network']['stations']
+        #print(stations)
+        total_bikes = 0
+        for station in stations:
+            free = station.get('free_bikes') or 0
+            empty = station.get('empty_slots') or 0
+            total_capacity = free + empty
+            total_bikes += total_capacity
+        bike_availability[city] = total_bikes
 
-# def add_city_bikes(bike_data,cur,conn):
-#     for city, bike_data in bike_data.items():
-#         city_name = city.split(',')[0]
-#         bike_number = bike_data
-#         cur.execute('''UPDATE City_Bike
-#                     SET city_bike = ?
-#                     WHERE city = ? ''', (bike_number, city_name))
+    with open("city_bike_data.json", "w") as f:
+        json.dump(bike_availability, f, indent=4)
 
-#     conn.commit()
+    return bike_availability
+
+def add_city_bikes(bike_data,cur,conn):
+    for city, bike_data in bike_data.items():
+        city_name = city.split(',')[0]
+        bike_number = bike_data
+        cur.execute('''UPDATE City_Bike
+                    SET city_bike = ?
+                    WHERE city = ? ''', (bike_number, city_name))
+
+    conn.commit()
+
+#SAMYS:
+
+def get_temperature(latitude, longitude):
+    headers = {
+        'User-Agent': 'MyWeatherApp (mayagordon6@gmail.com)'
+    }
+
+    weather_url = f"https://api.weather.gov/points/{latitude},{longitude}"
+    response = requests.get(weather_url, headers=headers)
+
+    if response.status_code != 200:
+        print("Could not load data")
+        return None
+
+    data = response.json()
+    forecast_url = data['properties']['forecast']
+    forecast_response = requests.get(forecast_url, headers=headers)
+    forecast_data = forecast_response.json()
+    
+    current_weather = forecast_data['properties']['periods'][0]
+    temperature = current_weather['temperature']
+    name = current_weather['name']
+    
+    # Step 8: Print and return the weather
+    #print(f"{name}: {temperature}")
+    return temperature
+
+def get_weather(data):
+    weather_info = {}
+    for city, info in data.items():
+        long = info["longitude"]
+        lat = info["latitude"]
+        weather_info[city] = get_temperature(lat, long)
+    print(weather_info)
+
 
 data = get_populations()
 cur, conn = create_database("citybike.db")
 create_states_table(data, cur, conn)
 create_citybike_table(data, cur, conn)
-# bike_data = city_bikes()
-# if bike_data is not None:
-#     add_city_bikes(bike_data,cur,conn) 
+get_weather(data)
+bike_data = city_bikes()
+if bike_data is not None:
+    add_city_bikes(bike_data,cur,conn) 
