@@ -3,6 +3,8 @@ import requests
 import sqlite3
 import os
 import json
+import matplotlib
+import matplotlib.pyplot as plt
 
 #MAYAS:
 
@@ -115,57 +117,111 @@ def city_bikes():
 
     return bike_availability
 
-def add_city_bikes(bike_data,cur,conn):
-    for city, bike_data in bike_data.items():
-        city_name = city.split(',')[0]
-        bike_number = bike_data
-        cur.execute('''UPDATE City_Bike
-                    SET city_bike = ?
-                    WHERE city = ? ''', (bike_number, city_name))
+#MAKE GRAPH FOR AVERAGE CITY BIKES PER STATE 
+#Step 1
+def add_city_bikes(bike_data,cur,conn): #Used ChatGPT to help the function run when the API hits too many requests
+    if isinstance(bike_data, dict):
+        for city, bike_number in bike_data.items():
+            city_name = city.split(',')[0]  
+            cur.execute('''UPDATE City_Bike
+                        SET city_bike = ?
+                        WHERE city = ? ''', (bike_number, city_name))
+            
+    elif isinstance(bike_data, str) and os.path.isfile(bike_data):
+        with open(bike_data, "r") as f:
+            bike_data = json.load(f)  
+
+        for city, bike_number in bike_data.items():
+            city_name = city.split(',')[0]  
+            cur.execute('''UPDATE City_Bike
+                        SET city_bike = ?
+                        WHERE city = ? ''', (bike_number, city_name))
 
     conn.commit()
 
+#Step 2: JOIN tables and calculate AVG
+def avg_bikes_by_state(cur, conn): #Used ChatGPT to help use SQLlite AVG() function
+    cur.execute('''
+        SELECT States.state, AVG(City_Bike.city_bike) AS avg_bikes
+        FROM City_Bike
+        JOIN States ON City_Bike.state_id = States.id
+        GROUP BY States.state
+    ''')
+
+    return cur.fetchall()
+
+#Step 3: Make Graph
+def avg_bike_by_state_graph(cur, conn):
+    data = avg_bikes_by_state(cur, conn)
+    states = []
+    avgs = []
+    for state, avg in data:
+        states.append(state)
+        if avg == None:
+            avg = 0
+            avgs.append(avg)
+        else:
+            avgs.append(avg)
+    plt.figure(figsize=(10, 5))
+    plt.bar(states, avgs, color='blue')
+    plt.xlabel('States')
+    plt.ylabel('Average Number of City Bikes')
+    plt.title('Average City Bikes Per State')
+    plt.xticks(rotation=90)
+    plt.show()
+
+
 #SAMYS:
 
-def get_temperature(latitude, longitude):
-    headers = {
-        'User-Agent': 'MyWeatherApp (mayagordon6@gmail.com)'
-    }
+# def get_temperature(latitude, longitude):
+#     headers = {
+#         'User-Agent': 'MyWeatherApp (mayagordon6@gmail.com)'
+#     }
 
-    weather_url = f"https://api.weather.gov/points/{latitude},{longitude}"
-    response = requests.get(weather_url, headers=headers)
+#     weather_url = f"https://api.weather.gov/points/{latitude},{longitude}"
+#     response = requests.get(weather_url, headers=headers)
 
-    if response.status_code != 200:
-        print("Could not load data")
-        return None
+#     if response.status_code != 200:
+#         print("Could not load data")
+#         return None
 
-    data = response.json()
-    forecast_url = data['properties']['forecast']
-    forecast_response = requests.get(forecast_url, headers=headers)
-    forecast_data = forecast_response.json()
+#     data = response.json()
+#     forecast_url = data['properties']['forecast']
+#     forecast_response = requests.get(forecast_url, headers=headers)
+#     forecast_data = forecast_response.json()
     
-    current_weather = forecast_data['properties']['periods'][0]
-    temperature = current_weather['temperature']
-    name = current_weather['name']
+#     current_weather = forecast_data['properties']['periods'][0]
+#     temperature = current_weather['temperature']
+#     name = current_weather['name']
     
-    # Step 8: Print and return the weather
-    #print(f"{name}: {temperature}")
-    return temperature
+#     # Step 8: Print and return the weather
+#     #print(f"{name}: {temperature}")
+#     return temperature
 
-def get_weather(data):
-    weather_info = {}
-    for city, info in data.items():
-        long = info["longitude"]
-        lat = info["latitude"]
-        weather_info[city] = get_temperature(lat, long)
-    print(weather_info)
+# def get_weather(data):
+#     weather_info = {}
+#     for city, info in data.items():
+#         long = info["longitude"]
+#         lat = info["latitude"]
+#         weather_info[city] = get_temperature(lat, long)
+#     print(weather_info)
 
+        
 
 data = get_populations()
 cur, conn = create_database("citybike.db")
 create_states_table(data, cur, conn)
 create_citybike_table(data, cur, conn)
-get_weather(data)
-bike_data = city_bikes()
+# get_weather(data)
+
+bike_data = city_bikes()  
 if bike_data is not None:
-    add_city_bikes(bike_data,cur,conn) 
+    add_city_bikes(bike_data, cur, conn)
+else:
+    base_path = os.path.abspath(os.path.dirname(__file__))
+    full_path = os.path.join(base_path, "city_bike_data.json")
+    add_city_bikes(full_path, cur, conn)
+
+# avg_weather(data, bike_data)
+avg_bikes_by_state(cur, conn)
+avg_bike_by_state_graph(cur, conn)
