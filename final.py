@@ -234,21 +234,27 @@ def get_temperature(lon, lat):
     temp = data['main']['temp']
     return temp
 
-def get_weather(data):
+def insert_weather(data):
     weather_info = {}
     for city,info in data.items():
         lon = str(info['longitude'])
         lat = str(info['latitude'])
         weather_info[city] = get_temperature(lon, lat)
-    print(weather_info)
+    
+    for city, weather in weather_info.items():
+            city_name = city.split(',')[0]  
+            cur.execute('''UPDATE City_Bike
+                        SET weather = ?
+                        WHERE city = ? ''', (weather, city_name))
 
-        
+    conn.commit()
+    
 #Function Calls
 data = get_populations()
 cur, conn = create_database("citybike.db")
 create_states_table(data, cur, conn)
 create_citybike_table(data, cur, conn)
-get_weather(data)
+insert_weather(data)
 
 bike_data = city_bikes()  
 if bike_data is not None:
