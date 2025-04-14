@@ -234,12 +234,17 @@ def get_temperature(lon, lat):
     temp = data['main']['temp']
     return temp
 
-def insert_weather(data):
+    
+def insert_weather(data, cur, conn):
     weather_info = {}
     for city,info in data.items():
         lon = str(info['longitude'])
         lat = str(info['latitude'])
         weather_info[city] = get_temperature(lon, lat)
+
+    with open("weather_data.json", "w") as f:
+        json.dump(weather_info, f, indent=4)
+
     
     for city, weather in weather_info.items():
             city_name = city.split(',')[0]  
@@ -248,24 +253,54 @@ def insert_weather(data):
                         WHERE city = ? ''', (weather, city_name))
 
     conn.commit()
-    
-#Function Calls
-data = get_populations()
-cur, conn = create_database("citybike.db")
-create_states_table(data, cur, conn)
-create_citybike_table(data, cur, conn)
-insert_weather(data)
 
-bike_data = city_bikes()  
-if bike_data is not None:
-    add_city_bikes(bike_data, cur, conn)
-else:
-    base_path = os.path.abspath(os.path.dirname(__file__))
-    full_path = os.path.join(base_path, "city_bike_data.json")
-    add_city_bikes(full_path, cur, conn)
+def avg_weather_bikes_by_state(cur, conn):
+    cur.execute('''
+        SELECT States.state, AVG(City_Bike.weather) AS avg_weather, AVG(City_Bike.city_bike) AS avg_bikes
+        FROM City_Bike
+        JOIN States ON City_Bike.state_id = States.id
+        GROUP BY States.state
+    ''')
+    return cur.fetchall()
 
-# avg_weather(data, bike_data)
-# avg_bikes_by_state(cur, conn)
-# avg_bike_by_state_graph(cur, conn)
-# avg_pop_per_state_graph(cur, conn)
-# avg_pop_bikes_scatter_plot(cur, conn)
+def avg_weather_bikes_by_state_plot(cur, conn):
+    data = avg_weather_bikes_by_state(cur, conn)
+    states = []
+    avg_weather_list = []
+    avg_bikes = []
+    for state, avg_weather, avg_bike in data:
+        states.append(state)
+        avg_weather_list.append(avg_weather)
+        avg_bikes.append(avg_bike)
+
+    plt.figure(figsize=(10, 6))
+    plt.scatter(avg_weather_list, avg_bikes, color='blue')
+    plt.xlabel('Average Weather of State')
+    plt.ylabel('Average Number of City Bikes')
+    plt.title('Scatter Plot: Weather vs. Average City Bikes per State')
+    plt.show()
+
+def main():
+    data = get_populations()
+    cur, conn = create_database("citybike.db")
+    create_states_table(data, cur, conn)
+    create_citybike_table(data, cur, conn)
+    insert_weather(data, cur, conn)
+
+    bike_data = city_bikes()  
+    if bike_data is not None:
+        add_city_bikes(bike_data, cur, conn)
+    else:
+        base_path = os.path.abspath(os.path.dirname(__file__))
+        full_path = os.path.join(base_path, "city_bike_data.json")
+        add_city_bikes(full_path, cur, conn)
+
+    avg_weather_bikes_by_state(cur, conn)
+    avg_weather_bikes_by_state_plot(cur, conn)
+    avg_bikes_by_state(cur, conn)
+    avg_bike_by_state_graph(cur, conn)
+    avg_pop_per_state_graph(cur, conn)
+    avg_pop_bikes_scatter_plot(cur, conn)
+
+if __name__ == "__main__":
+    main()
