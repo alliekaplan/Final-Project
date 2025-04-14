@@ -226,38 +226,21 @@ def avg_pop_bikes_scatter_plot(cur, conn):
 
 
 #SAMY'S:
-# def get_temperature(latitude, longitude):
-#     headers = {
-#         'User-Agent': 'MyWeatherApp (mayagordon6@gmail.com)'
-#     }
+def get_temperature(lon, lat):
+    key = 'd446d3fd963499d305ca3dfd1cbd1910'
+    url = f'https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={key}&units=imperial'
+    response = requests.get(url)
+    data = response.json() 
+    temp = data['main']['temp']
+    return temp
 
-#     weather_url = f"https://api.weather.gov/points/{latitude},{longitude}"
-#     response = requests.get(weather_url, headers=headers)
-
-#     if response.status_code != 200:
-#         print("Could not load data")
-#         return None
-
-#     data = response.json()
-#     forecast_url = data['properties']['forecast']
-#     forecast_response = requests.get(forecast_url, headers=headers)
-#     forecast_data = forecast_response.json()
-    
-#     current_weather = forecast_data['properties']['periods'][0]
-#     temperature = current_weather['temperature']
-#     name = current_weather['name']
-    
-#     # Step 8: Print and return the weather
-#     #print(f"{name}: {temperature}")
-#     return temperature
-
-# def get_weather(data):
-#     weather_info = {}
-#     for city, info in data.items():
-#         long = info["longitude"]
-#         lat = info["latitude"]
-#         weather_info[city] = get_temperature(lat, long)
-#     print(weather_info)
+def get_weather(data):
+    weather_info = {}
+    for city,info in data.items():
+        lon = str(info['longitude'])
+        lat = str(info['latitude'])
+        weather_info[city] = get_temperature(lon, lat)
+    print(weather_info)
 
         
 #Function Calls
@@ -265,7 +248,7 @@ data = get_populations()
 cur, conn = create_database("citybike.db")
 create_states_table(data, cur, conn)
 create_citybike_table(data, cur, conn)
-# get_weather(data)
+get_weather(data)
 
 bike_data = city_bikes()  
 if bike_data is not None:
@@ -276,7 +259,7 @@ else:
     add_city_bikes(full_path, cur, conn)
 
 # avg_weather(data, bike_data)
-avg_bikes_by_state(cur, conn)
-avg_bike_by_state_graph(cur, conn)
-avg_pop_per_state_graph(cur, conn)
-avg_pop_bikes_scatter_plot(cur, conn)
+# avg_bikes_by_state(cur, conn)
+# avg_bike_by_state_graph(cur, conn)
+# avg_pop_per_state_graph(cur, conn)
+# avg_pop_bikes_scatter_plot(cur, conn)
