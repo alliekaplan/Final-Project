@@ -39,7 +39,6 @@ def get_populations():
 
     return city_data
 
-
 """ MAYA: CREATES CITY BIKE DATABASE """
 def create_database(db_name):
     path = os.path.dirname(os.path.abspath(__file__))
@@ -49,39 +48,57 @@ def create_database(db_name):
 
 """ MAYA: CREATES STATES TABLE """
 def create_states_table(data, cur, conn): 
-    states = []
-    for city, info in data.items():
-        state = city.split(',')[1]
-        if state not in states:
-            states.append(state)
-
-    cur.execute("CREATE TABLE IF NOT EXISTS States (id INTEGER PRIMARY KEY, state TEXT)")
-    for i in range(len(states)):
-        cur.execute("INSERT OR IGNORE INTO States (id, state) VALUES (?,?)", (i, states[i]))
+    cur.execute("""
+        CREATE TABLE IF NOT EXISTS States (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            state TEXT UNIQUE
+        )
+    """)
+    for city_key in data:
+        state = city_key.split(',')[1].strip()  
+        cur.execute("INSERT OR IGNORE INTO States (state) VALUES (?)", (state,))
+    
     conn.commit()
 
 """ MAYA: CREATES CITY_BIKE TABLE """
 def create_citybike_table(data, cur, conn): 
-    cur.execute('DROP TABLE IF EXISTS City_Bike')
     cur.execute('''CREATE TABLE IF NOT EXISTS City_Bike (id INTEGER PRIMARY KEY AUTOINCREMENT, 
                 city TEXT, state_id INTEGER, long REAL, lat REAL, city_bike INTEGER, 
                 pop INTEGER, weather INTEGER)''')
-    for city, info in data.items():
-        city_name = city.split(',')[0]
-        state = city.split(',')[1]
+    conn.commit()
+
+    #Used ChatGPT to learn how to count current # of rows
+    cur.execute("SELECT COUNT(*) FROM City_Bike")
+    current_count = cur.fetchone()[0]
+
+    data_items = list(data.items())
+
+    if current_count >= len(data_items):
+        return
+
+    #Used ChatGPT to count 25 rows at a time
+    new_entries = data_items[current_count: current_count + 25]
+    for city_key, info in new_entries:
+        parts = city_key.split(',')
+        city_name = parts[0].strip()
+        state = parts[1].strip()
+        
+        
         cur.execute("SELECT id FROM States WHERE state = ?", (state,))
-        state_id = cur.fetchone()[0]
-        long = info["longitude"]
-        lat = info["latitude"]
-        city_bike = None
-        pop = info["population"]
-        weather = None
+        row = cur.fetchone()
+        if row is None:
+            continue
+        state_id = row[0]
         
-        cur.execute('''INSERT INTO City_Bike (city, state_id, long, lat, city_bike, pop, weather) 
-                    VALUES (?,?,?,?,?,?,?)''',
-                    (city_name,state_id,long,lat,city_bike, pop, weather))
+        long_val = info["longitude"]
+        lat_val = info["latitude"]
+        pop_val = info["population"]
         
-        conn.commit()
+        cur.execute('''INSERT INTO City_Bike (city, state_id, long, lat, city_bike, pop, weather)
+                       VALUES (?,?,?,?,?,?,?)''',
+                    (city_name, state_id, long_val, lat_val, None, pop_val, None))
+    
+    conn.commit()
 
 """ ALLIE: USES API TO FIND # OF CITY BIKES IN DIFFERENT CITIES """
 def city_bikes():
