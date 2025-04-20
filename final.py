@@ -5,6 +5,7 @@ import os
 import json
 import matplotlib
 import matplotlib.pyplot as plt
+# Every team mate contributed to this file from one computer as we faced troubles w/ github
 
 """ MAYA: USES WEB-SCRAPPING TO GET POPULATION OF CITY AND THEIR COORDINATES """
 def get_populations(): 
@@ -76,7 +77,7 @@ def create_citybike_table(data, cur, conn):
     if current_count >= len(data_items):
         return
 
-    #Used ChatGPT to count 25 rows at a time
+    #Used ChatGPT to count 25 rows at a time and limit the number of rows loaded at a time
     new_entries = data_items[current_count: current_count + 25]
     for city_key, info in new_entries:
         parts = city_key.split(',')
